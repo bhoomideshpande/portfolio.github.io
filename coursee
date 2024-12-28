@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design and Analysis of Algorithms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0078D7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #0078D7;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Design and Analysis of Algorithms</h1>
+    </header>
+    <section>
+        <p>This course serves as a cornerstone of computer science and computational problem-solving, focusing on the development of efficient and reliable solutions for complex problems. Mastering algorithms is essential for excelling in fields like software engineering, data science, and artificial intelligence.</p>
+
+        <h2>Key Algorithmic Paradigms Covered:</h2>
+        <ul>
+            <li><strong>Divide and Conquer</strong></li>
+            <li><strong>Greedy Algorithms</strong></li>
+            <li><strong>Dynamic Programming</strong></li>
+            <li><strong>Backtracking</strong></li>
+            <li><strong>Graph Algorithms</strong></li>
+        </ul>
+
+        <h2>Applications in the Real World:</h2>
+        <ul>
+            <li><strong>Search and Optimization:</strong> Powering search engines, logistics planning, and supply chain management.</li>
+            <li><strong>Graph Algorithms:</strong> Enabling navigation tools such as Google Maps.</li>
+            <li><strong>Dynamic Programming:</strong> Solving challenges in resource allocation, financial modeling, and bioinformatics.</li>
+            <li><strong>Greedy Algorithms:</strong> Addressing scheduling problems, route optimization, and content streaming services.</li>
+        </ul>
+
+        <p>This course equips students with the theoretical knowledge and practical skills to design cutting-edge solutions across diverse domains.</p>
+    </section>
+</body>
+</html>
