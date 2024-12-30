@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS Algorithm with code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0f9;
+            margin: 0;
+            padding: 0;
+            color: #4a2c85;
+        }
+        h1, h2 {
+            color: #6a1b9a;
+            text-align: center;
+            padding-top: 20px;
+        }
+        h3 {
+            color: #8e24aa;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #e1bee7;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #4a2c85;
+            overflow-x: auto;
+        }
+        .output {
+            background-color: #f3e5f5;
+            padding: 10px;
+            border-radius: 5px;
+            color: #6a1b9a;
+        }
+        .time-complexity {
+            background-color: #fce4ec;
+            padding: 10px;
+            border-radius: 5px;
+            color: #9c27b0;
+        }
+        .highlight {
+            color: #7b1fa2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>BFS Algorithm Example</h1>
+
+    <div class="content">
+        <h2>Code Implementation</h2>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+using namespace std;
+
+// Function to perform BFS
+void bfs(int adj&lt;&gt;[6], int V, int start) {
+    bool visited[V];  // Array to track visited nodes
+    for (int i = 0; i &lt; V; i++) {
+        visited[i] = false;  // Initialize all nodes as unvisited
+    }
+  queue&lt;int&gt; q;         // Queue for BFS traversal
+    visited[start] = true; // Mark the starting node as visited
+    q.push(start);         // Enqueue the starting node
+cout &lt;&lt; "BFS Traversal starting from node " &lt;&lt; start &lt;&lt; ": ";
+while (!q.empty()) {
+        int node = q.front(); // Get the front of the queue
+        q.pop();
+        cout &lt;&lt; node &lt;&lt; " ";   // Print the current node
+
+        // Visit all the neighbors of the node
+        for (int i = 0; i &lt; V; i++) {
+            if (adj[node][i] == 1 && !visited[i]) {  // If there's an edge and node i is unvisited
+                visited[i] = true;  // Mark as visited
+                q.push(i);          // Enqueue the neighbor
+            }
+        }
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int V = 6;  // Number of vertices
+    int adj[6][6] = {
+        {0, 1, 1, 0, 0, 0},
+        {1, 0, 1, 1, 0, 0},
+        {1, 1, 0, 0, 1, 0},
+        {0, 1, 0, 0, 1, 0},
+        {0, 0, 1, 1, 0, 1},
+        {0, 0, 0, 0, 1, 0}
+    };
+
+    int start;
+    cout &lt;&lt; "Enter the starting vertex for BFS (0 to 5): ";
+    cin &gt;&gt; start;
+
+    bfs(adj, V, start);
+
+    return 0;
+}
+        </pre>
+
+        <h2>Sample Output</h2>
+        <div class="output">
+            Enter the starting vertex for BFS (0 to 5): 0 <br>
+            BFS Traversal starting from node 0: 0 1 2 3 4 5
+        </div>
+
+        <h2>Time Complexity</h2>
+        <div class="time-complexity">
+            The time complexity of BFS Algorithm is <span class="highlight">O(V + E)</span>.
+        </div>
+
+        <h3>Explanation:</h3>
+        <p>BFS explores all the vertices and edges in the graph. In the worst case, it visits every vertex and edge once. Therefore, the time complexity of BFS is <span class="highlight">O(V + E)</span>, where V and E are the number of vertices and edges in the given graph.</p>
+    </div>
+
+</body>
+</html>
